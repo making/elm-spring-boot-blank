@@ -26,3 +26,4 @@ nbdist/
 tmp
 *credentials.yml
 version
+pom.xml.versionsBackup
