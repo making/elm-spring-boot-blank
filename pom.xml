@@ -14,7 +14,7 @@
     <artifactId>projectName</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>projectName</name>
-    <description>Blank multi project for Spring Boot + Eln</description>
+    <description>Blank multi project for Spring Boot + Elm</description>
 
     <modules>
         <module>projectName-frontend</module>
