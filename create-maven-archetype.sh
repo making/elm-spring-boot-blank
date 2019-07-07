@@ -26,8 +26,7 @@ sed -i.bk "s|projectName|elm-spring-boot-blank|g" pom.xml
 sed -i.bk "s|<scm>|<distributionManagement><snapshotRepository><id>repo</id><url>https://oss.sonatype.org/content/repositories/snapshots</url></snapshotRepository><repository><id>repo</id><url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url></repository></distributionManagement><scm>|g" pom.xml
 sed -i.bk "s|<build>|<build><plugins><plugin><groupId>org.sonatype.plugins</groupId><artifactId>nexus-staging-maven-plugin</artifactId><version>1.6.8</version><extensions>true</extensions><configuration><serverId>repo</serverId><nexusUrl>https://oss.sonatype.org/</nexusUrl><autoReleaseAfterClose>true</autoReleaseAfterClose></configuration></plugin><plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-gpg-plugin</artifactId><version>1.6</version><executions><execution><id>sign-artifacts</id><phase>verify</phase><goals><goal>sign</goal></goals></execution></executions></plugin></plugins>|g" pom.xml
 sed -i.bk '/<include>\*\*\/\*.json<\/include>/d' ./src/main/resources/META-INF/maven/archetype-metadata.xml
-sed -i.bk '/<include>manifest\.yml<\/include>/d' ./src/main/resources/META-INF/maven/archetype-metadata.xml
 sed -i.bk 's|<include>\*\*/\*.properties</include>|<include>**/*.properties</include><include>**/*.json</include>|' ./src/main/resources/META-INF/maven/archetype-metadata.xml
-sed -i.bk 's|fileSet encoding|fileSet filtered="true" encoding|' ./src/main/resources/META-INF/maven/archetype-metadata.xml
+sed -i.bk '15,30 s|fileSet encoding|fileSet filtered="true" encoding|g' ./src/main/resources/META-INF/maven/archetype-metadata.xml
 
 rm -f `find ${TMP_DIR} -name '*.bk'`
