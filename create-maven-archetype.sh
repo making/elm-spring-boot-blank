@@ -9,8 +9,8 @@ rm -rf ./tmp
 mkdir tmp
 cp -r  pom.xml projectName* .mvn mvnw* .gitignore manifest.yml tmp
 pushd tmp
-# sed -i.bk "s|projectName|\${artifactId}|g" manifest.yml
-# rm -f manifest.yml.bk
+sed -i.bk "s|projectName|\${rootArtifactId}|g" manifest.yml
+rm -f manifest.yml.bk
 
 TMP_DIR=`pwd`
 rm -rf $(find . -type d -name elm-stuff)
