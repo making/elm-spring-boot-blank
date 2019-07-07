@@ -1,4 +1,8 @@
+# Blank multi project for Spring Boot + Elm
 
+## How to use
+
+### Use Snapshot version
 
 ```
 mvn -U org.apache.maven.plugins:maven-archetype-plugin:2.2:generate \

@@ -10,7 +10,7 @@ class GreetingControllerTest {
 
     @BeforeAll
     void setUp() throws Exception {
-        this.testClient = WebTestClient.bindToController(new GreetingController())
+        this.testClient = WebTestClient.bindToRouterFunction(new GreetingHandler().routes())
             .build();
     }
 
