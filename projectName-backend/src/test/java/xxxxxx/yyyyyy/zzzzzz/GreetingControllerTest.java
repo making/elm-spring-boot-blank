@@ -4,21 +4,21 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
-class HelloControllerTest {
+class GreetingControllerTest {
 
     private WebTestClient testClient;
 
     @BeforeAll
     void setUp() throws Exception {
-        this.testClient = WebTestClient.bindToController(new HelloController())
+        this.testClient = WebTestClient.bindToController(new GreetingController())
             .build();
     }
 
     @Test
-    void hello() throws Exception {
-        this.testClient.get().uri("/") //
+    void greeting() throws Exception {
+        this.testClient.get().uri("/greeting") //
             .exchange() //
             .expectStatus().isOk() //
-            .expectBody(String.class).isEqualTo("Hello World!");
+            .expectBody(String.class).isEqualTo("{\"id\":1,\"content\":\"Hello, World!\"}");
     }
 }

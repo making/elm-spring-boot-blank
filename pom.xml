@@ -17,11 +17,17 @@
     <description>Blank multi project for Spring Boot + Eln</description>
 
     <modules>
+        <module>projectName-frontend</module>
         <module>projectName-backend</module>
     </modules>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>xxxxxx.yyyyyy.zzzzzz</groupId>
+                <artifactId>projectName-frontend</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <dependency>
                 <groupId>xxxxxx.yyyyyy.zzzzzz</groupId>
                 <artifactId>projectName-backend</artifactId>
