@@ -8,7 +8,7 @@
 mvn archetype:generate\
  -DarchetypeGroupId=am.ik.archetype\
  -DarchetypeArtifactId=elm-spring-boot-blank-archetype\
- -DarchetypeVersion=0.0.1
+ -DarchetypeVersion=0.0.2
 ```
 
 ### Use Snapshot version
@@ -27,17 +27,17 @@ mvn -U org.apache.maven.plugins:maven-archetype-plugin:2.2:generate \
 mvn archetype:generate\
  -DarchetypeGroupId=am.ik.archetype\
  -DarchetypeArtifactId=elm-spring-boot-blank-archetype\
- -DarchetypeVersion=0.0.1\
+ -DarchetypeVersion=0.0.2\
  -DgroupId=com.example\
  -DartifactId=demo-app\
- -Dversion=1.0-SNAPSHOT\
+ -Dversion=1.0.0-SNAPSHOT\
  -B
 
 cd demo-app
 chmod +x ./mvnw*
 
 ./mvnw clean package
-java -jar demo-app-backend/target/demo-app-backend-1.0-SNAPSHOT.jar
+java -jar demo-app-backend/target/demo-app-backend-1.0.0-SNAPSHOT.jar
 ```
 
 ![image](https://user-images.githubusercontent.com/106908/60767606-30f05800-a0f5-11e9-846c-c7ac0083d15f.png)
