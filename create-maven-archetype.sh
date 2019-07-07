@@ -10,7 +10,7 @@ mkdir tmp
 cp -r  pom.xml projectName* .mvn mvnw* .gitignore manifest.yml tmp
 pushd tmp
 sed -i.bk "s|projectName|\${rootArtifactId}|g" manifest.yml
-sed -i.bk "s|1\0-SNAPSHOT|\${version}|g" manifest.yml
+sed -i.bk "s|1\.0-SNAPSHOT|\${version}|g" manifest.yml
 rm -f manifest.yml.bk
 
 TMP_DIR=`pwd`
