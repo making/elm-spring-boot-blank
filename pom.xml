@@ -16,17 +16,17 @@
     <name>projectName</name>
     <description>Blank multi project for Spring Boot + Eln</description>
 
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
-
     <modules>
-
+        <module>projectName-backend</module>
     </modules>
 
     <dependencyManagement>
         <dependencies>
-
+            <dependency>
+                <groupId>xxxxxx.yyyyyy.zzzzzz</groupId>
+                <artifactId>projectName-backend</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
