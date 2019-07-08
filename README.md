@@ -49,4 +49,4 @@ Deploy to Cloud Foundry:
 cf push
 ```
 
-demo: [https://demo-app.apps.pcfbeta.io](https://demo-app.apps.pcfbeta.io)
+demo: [https://demo-app.apps.pcfone.io](https://demo-app.apps.pcfone.io)
